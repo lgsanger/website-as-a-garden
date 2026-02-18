@@ -16,5 +16,120 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 0;
 }
 
+.hero-panel {
+  background-color: #5b8632;
+  padding: 2rem 3rem;
+  border: 3px solid #d89c56;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 9rem;
+}
+
+.hero-title {
+  color: #d89c56;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.08em;
+  margin: 0 0 1.5rem 0;
+}
+
+.hero-key {
+  margin-top: 1.5rem;
+  width: 120px;
+  max-width: 30vw;
+  transition: transform 0.25s ease;
+}
+
+.hero-key-link {
+  display: inline-block;
+}
+
+.hero-key-link:hover .hero-key,
+.hero-key-link:focus-visible .hero-key {
+  transform: rotate(90deg);
+}
+
+.garden-hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url("assets/gardenpage.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.garden-panel {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 220px;
+  height: 220px;
+  background-color: #5b8632;
+  border: 3px solid #d89c56;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.garden-text {
+  color: #d89c56;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.wateringcan {
+  position: relative;
+  width: 120px;
+  max-width: 25vw;
+}
+
+.rain {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.rain.active {
+  opacity: 1;
+}
+
+.raindrop {
+  position: absolute;
+  top: -10%;
+  width: 2px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  animation-name: rain-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rain-fall {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 120vh, 0);
+    opacity: 0;
+  }
+}
