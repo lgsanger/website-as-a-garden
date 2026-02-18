@@ -133,3 +133,21 @@ body {
     opacity: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .hero-panel {
+    padding: 1.25rem 1.5rem;
+    margin-top: 6rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.06em;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .hero-key {
+    width: 90px;
+  }
+}
